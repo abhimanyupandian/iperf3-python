@@ -12,6 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+
 class ConnectionCache(object):
     """Cache for test libs to use with concurrent connections, processes, etc.
 
@@ -151,6 +152,7 @@ class ConnectionCache(object):
         if not 0 < index <= len(self._connections):
             raise ValueError
         return index
+
 
 class NoConnection(object):
 
