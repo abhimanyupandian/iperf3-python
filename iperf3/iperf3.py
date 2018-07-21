@@ -600,7 +600,7 @@ class Client(IPerf3):
 
             if not self.iperf_version.startswith('iperf 3.1'):
                 data = read_pipe(self._pipe_out)
-                if data.startswith('Control connection'):
+                if not data.startswith('{'):
                     data = '{' + data.split('{', 1)[1]
             else:
                 data = c_char_p(
